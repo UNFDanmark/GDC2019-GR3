@@ -4,25 +4,24 @@ using UnityEngine;
 
 public class Testfish : MonoBehaviour
 {
-    public Transform explosionPrefab;
+    public Rigidbody Rb;
+    public float movement = 10f;
 
-    void OnCollisionEnter(Collision collision)
+
+    /* gør så fiskene ikke collider */
+    private void Start()
     {
-        ContactPoint contact = collision.contacts[0];
-        Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
-        Vector3 pos = contact.point;
-        Instantiate(explosionPrefab, pos, rot);
-        Destroy(gameObject);
-    }
-    /*   // Start is called before the first frame update
-    void Start()
-    {
-        
+        Rb = GetComponent<Rigidbody>();
+        Physics.IgnoreLayerCollision(8, 9);
+        Physics.IgnoreLayerCollision(9, 9);
     }
 
-    // Update is called once per frame
-    void Update()
+    /* får fiskene til at bevæge sig */
+    private void FixedUpdate()
     {
-      */  
+        gameObject.GetComponent<Rigidbody>().velocity = transform.right * movement;
     }
 
+
+    
+}      
