@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fish
+  - Common_Fish
+  - Rare_Fish
+  - Epic_Fish
+  - Dead
   layers:
   - Default
   - TransparentFX
@@ -14,8 +18,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - barrier-layer
+  - fish-layer
   - 
   - 
   - 

@@ -6,6 +6,7 @@ public class Man : MonoBehaviour
 {   //Variabler for vores værdier//
     public float speed = 50f;
     public Rigidbody RB;
+    public float HookRadius;
 
 
     
@@ -26,5 +27,9 @@ public class Man : MonoBehaviour
         float VSpeed = Input.GetAxisRaw("Vertical");
         RB.velocity = new Vector3(RB.velocity.x, VSpeed * speed, RB.velocity.z);
 
+  
+
     }
+    
+    
 }
