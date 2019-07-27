@@ -4,32 +4,47 @@ using UnityEngine;
 
 public class KroghHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-     
-    }
+    public GameObject Score;
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
+    //Pointene for hver slags fisk
+    public int TestfishPoint;
+    public int Common_Fishpoint;
+    public int Rare_Fishpoint;
+    public int Epic_Fishpoint;
+    public int NumberOfFish2;
+
+
+
+
 
   
 
+    /* fjerner fisk når man rører dem og giver point*/
 
-    public void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        print(collision.gameObject.name);
-        if(collision.gameObject.tag == "Fish")
+        if (other.gameObject.tag == "Fish")
         {
-            print("fik fisk");
-        }
-    }
+            Score.GetComponent<GameManagerScript>().score += 10;
+            Destroy(other.gameObject);
+            
 
-    void OnCollisionStay(Collision other)
-    {
+        }
+        if (other.gameObject.tag == "Common_Fish")
+        {
+            Score.GetComponent<GameManagerScript>().score += 20;
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "Rare_Fish")
+        {
+            Score.GetComponent<GameManagerScript>().score += 40;
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "Epic_Fish")
+        {
+            Score.GetComponent<GameManagerScript>().score += 80;
+            Destroy(other.gameObject);
+        }
 
     }
 }
