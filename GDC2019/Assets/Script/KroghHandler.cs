@@ -29,28 +29,29 @@ public class KroghHandler : MonoBehaviour
         if (other.gameObject.tag == "Fish")
         {
             Score.GetComponent<GameManagerScript>().score += 10;
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<Testfish>().Catch();
             NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
+            
 
         }
         if (other.gameObject.tag == "Common_Fish")
         {
             Score.GetComponent<GameManagerScript>().score += 20;
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<Testfish>().Catch();
             NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
 
         }
         if (other.gameObject.tag == "Rare_Fish")
         {
             Score.GetComponent<GameManagerScript>().score += 40;
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<Testfish>().Catch();
             NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
 
         }
         if (other.gameObject.tag == "Epic_Fish")
         {
             Score.GetComponent<GameManagerScript>().score += 80;
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<Testfish>().Catch();
             NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
 
         }
