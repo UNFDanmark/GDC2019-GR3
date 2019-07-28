@@ -922,7 +922,7 @@ MonoBehaviour:
   score: 0
   scoretext: {fileID: 95274942}
   totalScore: 0
-  TidTilbage: 30
+  TidTilbage: 99999
   DeathTime: {fileID: 1665295031}
   DeathScreen: {fileID: 0}
 --- !u!4 &634434368

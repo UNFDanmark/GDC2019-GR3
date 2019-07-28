@@ -31,6 +31,7 @@ public class KroghHandler : MonoBehaviour
             Score.GetComponent<GameManagerScript>().score += 10;
             other.gameObject.GetComponent<Testfish>().Catch();
             NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
+            print(NumberOfFish);
             
 
         }
@@ -39,6 +40,7 @@ public class KroghHandler : MonoBehaviour
             Score.GetComponent<GameManagerScript>().score += 20;
             other.gameObject.GetComponent<Testfish>().Catch();
             NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
+            print(NumberOfFish);
 
         }
         if (other.gameObject.tag == "Rare_Fish")
@@ -46,6 +48,7 @@ public class KroghHandler : MonoBehaviour
             Score.GetComponent<GameManagerScript>().score += 40;
             other.gameObject.GetComponent<Testfish>().Catch();
             NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
+            print(NumberOfFish);
 
         }
         if (other.gameObject.tag == "Epic_Fish")
@@ -53,6 +56,7 @@ public class KroghHandler : MonoBehaviour
             Score.GetComponent<GameManagerScript>().score += 80;
             other.gameObject.GetComponent<Testfish>().Catch();
             NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
+            print(NumberOfFish);
 
         }
 

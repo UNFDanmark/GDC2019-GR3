@@ -7,8 +7,10 @@ public class Testfish : MonoBehaviour
     public Rigidbody Rb;
     public float movement = 10f;
     public bool Catched = false;
-    public float force = 100;
-  
+    public float Yeet_force = 1;
+    public float Min_random;
+    public float Max_random;
+    public bool tilføjet_yeet = false;
 
 
     /* gør så fiskene ikke collider */
@@ -30,8 +32,25 @@ public class Testfish : MonoBehaviour
         }
         else
         {
-            gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-            Quaternion.Euler(0, 0, 180);
+            if (tilføjet_yeet == false)
+            {
+                //stop
+                gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+
+                //drej
+                transform.eulerAngles = new Vector3(0, 0, 90);
+
+                //giver fisken gravity
+                gameObject.GetComponent<Rigidbody>().useGravity = true;
+
+                //skub
+                gameObject.GetComponent<Rigidbody>().AddForce(Random.Range(Min_random, Max_random), Yeet_force, 0, ForceMode.Impulse);
+
+                tilføjet_yeet = true;
+            }
+
+
+            
 
             //Rb.AddForce(transform.forward * force);
         }
@@ -54,5 +73,5 @@ public class Testfish : MonoBehaviour
     }
 
     */
-
+    
 }
