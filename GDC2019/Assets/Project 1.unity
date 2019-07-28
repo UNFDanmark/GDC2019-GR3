@@ -584,6 +584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 697df7f5916cf6e46bcc5bf7cd2ca2de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NumberOfFish: {fileID: 647424589}
 --- !u!1 &548558985
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,7 +882,10 @@ MonoBehaviour:
   - {fileID: 4182789969633776147, guid: 34addf3d419b52448a76c504c5028e57, type: 3}
   placement: 0
   rotation: 180
-  tidMellemSpawns: 5
+  tidMellemSpawns: 20
+  tidTilSpawn: 0
+  NumberOfFish: 0
+  NumberOfFishSpawning: 0
 --- !u!4 &647424591
 Transform:
   m_ObjectHideFlags: 0
@@ -1346,6 +1350,7 @@ MonoBehaviour:
   Common_Fishpoint: 0
   Rare_Fishpoint: 0
   Epic_Fishpoint: 0
+  NumberOfFish: {fileID: 0}
 --- !u!54 &1540601263
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1777,3 +1782,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 697df7f5916cf6e46bcc5bf7cd2ca2de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NumberOfFish: {fileID: 647424589}
