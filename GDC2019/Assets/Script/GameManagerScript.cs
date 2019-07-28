@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
@@ -9,11 +10,14 @@ public class GameManagerScript : MonoBehaviour
     public Text scoretext;
     public float totalScore;
     public float TidTilbage;
-    //public Color color = (0, 0, 1, 1);
+    public Text DeathTime;
+    public GameObject DeathScreen;
+   
 
     private void Start()
     {
-        
+
+      
     }
 
     void Update()
@@ -21,12 +25,13 @@ public class GameManagerScript : MonoBehaviour
         TidTilbage -= Time.deltaTime;    
 
         scoretext.text = "Score:" + score;
-        /*totalScore = totalScore + score;
 
-        if(totalScore > 50 )
+        DeathTime.text = "Time:" + (int)TidTilbage;
+        
+        if (TidTilbage <= 0)
         {
-           
-        }*/
-
+            SceneManager.LoadScene("DEATHSCREEN!");
+        }
+        
     }
 }
