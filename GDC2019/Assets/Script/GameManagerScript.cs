@@ -9,6 +9,7 @@ public class GameManagerScript : MonoBehaviour
     public Text scoretext;
     public float totalScore;
     public float TidTilbage;
+    public Text DeathTime;
     //public Color color = (0, 0, 1, 1);
 
     private void Start()
@@ -21,6 +22,9 @@ public class GameManagerScript : MonoBehaviour
         TidTilbage -= Time.deltaTime;    
 
         scoretext.text = "Score:" + score;
+
+        DeathTime.text = "Time:" + (int)TidTilbage;
+        
         /*totalScore = totalScore + score;
 
         if(totalScore > 50 )
