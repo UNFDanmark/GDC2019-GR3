@@ -122,4 +122,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rb: {fileID: 0}
-  movement: 10
+  movement: 20
+  Catched: 0
+  Yeet_force: 100
+  Min_random: -20
+  Max_random: 20
+  "tilf\xF8jet_yeet": 0
+  NumberOfFish: {fileID: 0}
+  GM: {fileID: 0}

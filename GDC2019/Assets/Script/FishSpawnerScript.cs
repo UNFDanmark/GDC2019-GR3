@@ -11,6 +11,8 @@ public class FishSpawnerScript : MonoBehaviour
     public float tidMellemSpawns;
     public float tidTilSpawn;
     public int NumberOfFish;
+    public int NumberOfFishSpawning;
+    public GameObject spawned_fish;
 
 
     /* timer der viser hvornår fisk spawner*/
@@ -20,7 +22,13 @@ public class FishSpawnerScript : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if(tidTilSpawn < 0)
+        if (NumberOfFish < 5)
+        {
+            tidTilSpawn = 0;
+        }
+
+
+        if (tidTilSpawn <= 0)
         {
             SpawnFish();
             tidTilSpawn = tidMellemSpawns;
@@ -40,88 +48,189 @@ public class FishSpawnerScript : MonoBehaviour
     /* vælger hvor fisk skal spawne */
     public void SpawnFish()
     {
-        int placement = Random.Range(0, 2);
-        //print(placement);
+        //int placement = Random.Range(0, 2);
+        
 
-        if (placement == 0)
+        int NumberOfFishSpawning = Random.Range(0, 4);
+        print(placement);
+
+        if (NumberOfFishSpawning == 0)
         {
 
-            int x = Random.Range(-150, -90);
-            int y = Random.Range(-30, 10);
-            Instantiate(GetFish(), new Vector3(x, y, 26), transform.rotation);
+            GetFish();
             NumberOfFish = NumberOfFish + 1;
-            print(NumberOfFish);
-
-            int x1 = Random.Range(-150, -90);
-            int y1 = Random.Range(-30, 10);
-            Instantiate(GetFish(), new Vector3(x1, y1, 26), transform.rotation);
-            NumberOfFish += 1;
-            print(NumberOfFish);
-
-            int x2 = Random.Range(-150, -90);
-            int y2 = Random.Range(-30, 10);
-            Instantiate(GetFish(), new Vector3(x2, y2, 26), transform.rotation);
-            NumberOfFish += 1;
-            print(NumberOfFish);
-
-            int x3 = Random.Range(-150, -90);
-            int y3 = Random.Range(-30, 10);
-            Instantiate(GetFish(), new Vector3(x3, y3, 26), transform.rotation);
-            NumberOfFish += 1;
-            print(NumberOfFish);
+            //print(NumberOfFish);
         }
-        if (placement == 1)
+        if (NumberOfFishSpawning == 1)
+        {
+            GetFish();
+            NumberOfFish = NumberOfFish + 1;
+            //print(NumberOfFish);
+
+            GetFish();
+            NumberOfFish = NumberOfFish + 1;
+            //print(NumberOfFish);
+        }
+        if (NumberOfFishSpawning == 2)
+        {
+            GetFish();
+            NumberOfFish = NumberOfFish + 1;
+            //print(NumberOfFish);
+
+            GetFish();
+            NumberOfFish = NumberOfFish + 1;
+            //print(NumberOfFish);
+
+            GetFish();
+            NumberOfFish = NumberOfFish + 1;
+            //print(NumberOfFish);
+        }
+        if (NumberOfFishSpawning == 3)
+        {
+            GetFish();
+            NumberOfFish = NumberOfFish + 1;
+            //print(NumberOfFish);
+
+            GetFish();
+            NumberOfFish = NumberOfFish + 1;
+            //print(NumberOfFish);
+
+            GetFish();
+            NumberOfFish = NumberOfFish + 1;
+            //print(NumberOfFish);
+
+            GetFish();
+            NumberOfFish = NumberOfFish + 1;
+            //print(NumberOfFish);
+
+        }
+
+
+        if (NumberOfFishSpawning == 0)
         {
 
-            int x4 = Random.Range(85, 145);
-            int y4 = Random.Range(-30, 10);
-            Instantiate(GetFish(), new Vector3(x4, y4, 26), Quaternion.Euler(0, 0, 180));
-            NumberOfFish += 1;
-            print(NumberOfFish);
+            GetFish();
+            NumberOfFish = NumberOfFish + 1;
+            //print(NumberOfFish);
 
-            int x5 = Random.Range(85, 145);
-            int y5 = Random.Range(-30, 10);
-            Instantiate(GetFish(), new Vector3(x5, y5, 26), Quaternion.Euler(0, 0, 180));
-            NumberOfFish += 1;
-            print(NumberOfFish);
+        }
+        if (NumberOfFishSpawning == 1)
+        {
+            GetFish();
+            NumberOfFish = NumberOfFish + 1;
+            //print(NumberOfFish);
 
-            int x6 = Random.Range(85, 145);
-            int y6 = Random.Range(-30, 10);
-            Instantiate(GetFish(), new Vector3(x6, y6, 26), Quaternion.Euler(0, 0, 180));
-            NumberOfFish += 1;
-            print(NumberOfFish);
+            GetFish();
+            NumberOfFish = NumberOfFish + 1;
+            //print(NumberOfFish);
+        }
+        if (NumberOfFishSpawning == 2)
+        {
 
-            int x7 = Random.Range(85, 145);
-            int y7 = Random.Range(-30, 10);
-            Instantiate(GetFish(), new Vector3(x7, y7, 26), Quaternion.Euler(0, 0, 180));
-            NumberOfFish += 1;
-            print(NumberOfFish);
+            GetFish();
+            NumberOfFish = NumberOfFish + 1;
+            //print(NumberOfFish);
+
+            GetFish();
+            NumberOfFish = NumberOfFish + 1;
+            //print(NumberOfFish);
+
+            GetFish();
+            NumberOfFish = NumberOfFish + 1;
+            //print(NumberOfFish);
+
+        }
+        if (NumberOfFishSpawning == 3)
+        {
+
+            GetFish();
+            NumberOfFish = NumberOfFish + 1;
+            //print(NumberOfFish);
+
+            GetFish();
+            NumberOfFish = NumberOfFish + 1;
+            //print(NumberOfFish);
+
+            GetFish();
+            NumberOfFish = NumberOfFish + 1;
+            //print(NumberOfFish);
+
+            GetFish();
+            NumberOfFish = NumberOfFish + 1;
+            //print(NumberOfFish);
+
         }
     }
 
     /* vælg hvilken fisk det er */
-    public GameObject GetFish()
+    public void GetFish()
     {
         int tal = Random.Range(1, 100);
-        //print(tal);
+        int placement = Random.Range(0, 2);
+        print(tal);
 
-        if (0 < tal && tal < 50)
+        if (0 <= tal && tal <= 50)
         {
-            return Fisk[0];
+            if (placement == 1)
+            {
+                int x = Random.Range(85, 145);
+                int y = Random.Range(-30, 10);
+                Instantiate(Fisk[0], new Vector3(x, y, 26), Quaternion.Euler(0, 0, 180));
+                print("dfsf");
+            }
+            else if(placement == 0)
+            {
+                int x = Random.Range(-150, -90);
+                int y = Random.Range(-30, 10);
+                Instantiate(Fisk[0], new Vector3(x, y, 26), Quaternion.identity);
+            }
         }
-        if (51 < tal && tal < 75)
+        if (51 <= tal && tal <= 75)
         {
-            return Fisk[1];
+            if (placement == 1)
+            {
+                int x = Random.Range(85, 145);
+                int y = Random.Range(-30, 10);
+                Instantiate(Fisk[1], new Vector3(x, y, 26), Quaternion.Euler(0, 0, 180));
+            }
+            else if (placement == 0)
+            {
+                int x = Random.Range(-150, -90);
+                int y = Random.Range(-30, 10);
+                Instantiate(Fisk[1], new Vector3(x, y, 26), Quaternion.identity);
+            }
         }
-        if (76 < tal && tal < 90)
+        if (76 <= tal && tal <= 90)
         {
-            return Fisk[2];
+            if (placement == 1)
+            {
+                int x = Random.Range(85, 145);
+                int y = Random.Range(-30, 10);
+                Instantiate(Fisk[2], new Vector3(x, y, 26), Quaternion.Euler(0, 0, 180));
+            }
+            else if (placement == 0)
+            {
+                int x = Random.Range(-150, -90);
+                int y = Random.Range(-30, 10);
+                Instantiate(Fisk[2], new Vector3(x, y, 26), Quaternion.identity);
+            }
         }
-        if (91 < tal && tal < 100)
+        if (91 <= tal && tal <= 100)
         {
-            return Fisk[3];
+            if(placement == 1)
+            {
+                int x = Random.Range(85, 145);
+                int y = Random.Range(-30, 10);
+                Instantiate(Fisk[3], new Vector3(x, y, 26), Quaternion.Euler(0, 0, 180));
+            }
+            else if (placement == 0)
+            {
+                int x = Random.Range(-150, -90);
+                int y = Random.Range(-30, 10);
+                Instantiate(Fisk[3], new Vector3(x, y, 26), Quaternion.identity);
+            }
         }
-        return Fisk[0];
+        
     }
 } 
 

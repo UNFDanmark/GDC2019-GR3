@@ -9,6 +9,7 @@ TagManager:
   - Rare_Fish
   - Epic_Fish
   - Dead
+  - Fisker
   layers:
   - Default
   - TransparentFX

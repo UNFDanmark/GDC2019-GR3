@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4182789969633776147}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.8, y: -20.212662, z: 25.531727}
+  m_LocalPosition: {x: 16.8, y: -20.212662, z: 25.7}
   m_LocalScale: {x: 7.702718, y: -2.3988519, z: 0.93654686}
   m_Children: []
   m_Father: {fileID: 0}
@@ -122,4 +122,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rb: {fileID: 0}
-  movement: 30
+  movement: 60
+  Catched: 0
+  Yeet_force: 100
+  Min_random: -45
+  Max_random: 45
+  "tilf\xF8jet_yeet": 0
+  NumberOfFish: {fileID: 0}
