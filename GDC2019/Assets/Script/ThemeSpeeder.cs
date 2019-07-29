@@ -21,7 +21,20 @@ public class ThemeSpeeder : MonoBehaviour
     {
         timeLeft -= Time.deltaTime;
 
-        pitchTilMusik = 1 + (maxPitch / gameLength) * (gameLength - timeLeft);
-        ThemeSource.pitch = pitchTilMusik;
+        if(timeLeft <= 1 && timeLeft > 0)
+        {
+            pitchTilMusik = (timeLeft + 0.3f);
+            ThemeSource.pitch = pitchTilMusik;
+        }
+        else if(timeLeft <= 0)
+        {
+            ThemeSource.Stop();
+        }
+        else
+        {
+            pitchTilMusik = 1 + (maxPitch / gameLength) * (gameLength - timeLeft);
+            ThemeSource.pitch = pitchTilMusik;
+        }
+
     }
 }
