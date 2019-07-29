@@ -12,6 +12,7 @@ public class FishSpawnerScript : MonoBehaviour
     public float tidTilSpawn;
     public int NumberOfFish;
     public int NumberOfFishSpawning;
+    public GameObject spawned_fish;
 
 
     /* timer der viser hvornår fisk spawner*/
@@ -193,7 +194,24 @@ public class FishSpawnerScript : MonoBehaviour
 
         if (0 < tal && tal < 50)
         {
+
+
+
             return Fisk[0];
+            /*if (placement == 1)
+            {
+                int x = Random.Range(-150, -90);
+                int y = Random.Range(-30, 10);
+                Instantiate(Fisk[0], new Vector3(x, y, 26), Quaternion.identity);
+            }
+            else if(placement == 0)
+            {
+                int x = Random.Range(-150, -90);
+                int y = Random.Range(-30, 10);
+                Instantiate(Fisk[0], new Vector3(x, y, 26), Quaternion.Euler(0,0,180));
+            }
+            */
+
         }
         if (51 < tal && tal < 75)
         {
