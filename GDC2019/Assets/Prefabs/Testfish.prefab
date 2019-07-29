@@ -125,6 +125,6 @@ MonoBehaviour:
   movement: 20
   Catched: 0
   Yeet_force: 100
-  Min_random: -90
-  Max_random: 90
+  Min_random: -20
+  Max_random: 20
   "tilf\xF8jet_yeet": 0

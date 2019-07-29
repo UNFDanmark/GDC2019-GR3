@@ -11,6 +11,7 @@ public class Testfish : MonoBehaviour
     public float Min_random;
     public float Max_random;
     public bool tilføjet_yeet = false;
+    public GameObject NumberOfFish;
 
 
     /* gør så fiskene ikke collider */
@@ -19,7 +20,8 @@ public class Testfish : MonoBehaviour
         Rb = GetComponent<Rigidbody>();
         Physics.IgnoreLayerCollision(8, 9);
         Physics.IgnoreLayerCollision(9, 9);
-        
+        NumberOfFish = GameObject.Find("FishSpawner");
+
     }
 
     /* får fiskene til at bevæge sig */
@@ -32,6 +34,8 @@ public class Testfish : MonoBehaviour
         }
         else
         {
+            
+
             if (tilføjet_yeet == false)
             {
                 //stop
@@ -45,6 +49,8 @@ public class Testfish : MonoBehaviour
 
                 //skub
                 gameObject.GetComponent<Rigidbody>().AddForce(Random.Range(Min_random, Max_random), Yeet_force, 0, ForceMode.Impulse);
+
+                
 
                 tilføjet_yeet = true;
             }

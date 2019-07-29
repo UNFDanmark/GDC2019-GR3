@@ -28,35 +28,46 @@ public class KroghHandler : MonoBehaviour
     {
         if (other.gameObject.tag == "Fish")
         {
-            Score.GetComponent<GameManagerScript>().score += 10;
-            other.gameObject.GetComponent<Testfish>().Catch();
-            NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
-            print(NumberOfFish);
-            
+            if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
+            {
+                Score.GetComponent<GameManagerScript>().score += 10;
+                other.gameObject.GetComponent<Testfish>().Catch();
+                NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
+                print(NumberOfFish);
+            }
 
         }
         if (other.gameObject.tag == "Common_Fish")
         {
-            Score.GetComponent<GameManagerScript>().score += 20;
-            other.gameObject.GetComponent<Testfish>().Catch();
-            NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
-            print(NumberOfFish);
+            if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
+            {
+                Score.GetComponent<GameManagerScript>().score += 20;
+                other.gameObject.GetComponent<Testfish>().Catch();
+                NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
+                print(NumberOfFish);
+            }
 
         }
         if (other.gameObject.tag == "Rare_Fish")
         {
-            Score.GetComponent<GameManagerScript>().score += 40;
-            other.gameObject.GetComponent<Testfish>().Catch();
-            NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
-            print(NumberOfFish);
+            if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
+            {
+                Score.GetComponent<GameManagerScript>().score += 40;
+                other.gameObject.GetComponent<Testfish>().Catch();
+                NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
+                print(NumberOfFish);
+            }
 
         }
         if (other.gameObject.tag == "Epic_Fish")
         {
-            Score.GetComponent<GameManagerScript>().score += 80;
-            other.gameObject.GetComponent<Testfish>().Catch();
-            NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
-            print(NumberOfFish);
+            if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
+            {
+                Score.GetComponent<GameManagerScript>().score += 80;
+                other.gameObject.GetComponent<Testfish>().Catch();
+                NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
+                print(NumberOfFish);
+            }
 
         }
 
