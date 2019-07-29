@@ -88,7 +88,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224746973422181260}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -125,7 +125,9 @@ MonoBehaviour:
   movement: 40
   Catched: 0
   Yeet_force: 100
+  Yeet_Delay: 0.5
   Min_random: 30
   Max_random: -30
   "tilf\xF8jet_yeet": 0
-  NumberOfFish: {fileID: 0}
+  GM: {fileID: 0}
+  IsShot: 0

@@ -24,6 +24,10 @@ public class KroghHandler : MonoBehaviour
     {
         NumberOfFish = GameObject.Find("FishSpawner");
     }
+
+   
+
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Fish")
@@ -72,4 +76,5 @@ public class KroghHandler : MonoBehaviour
         }
 
     }
+   
 }

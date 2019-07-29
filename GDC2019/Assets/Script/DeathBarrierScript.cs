@@ -13,48 +13,42 @@ public class DeathBarrierScript : MonoBehaviour
     {
         NumberOfFish = GameObject.Find("FishSpawner");
     }
-
-    /* fjerner fisk og minuser numberOfFisk*/
-    public void OnCollisionEnter(Collision Wall)
+    private void OnTriggerEnter(Collider other)
     {
-
-        if (Wall.gameObject.tag == "Fish")
+        if (other.gameObject.tag == "Fish")
         {
-            if (Wall.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
+            if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
             {
-                Destroy(Wall.gameObject);
+                Destroy(other.gameObject);
                 NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
             }
         }
 
-        if (Wall.gameObject.tag == "Common_Fish")
+        if (other.gameObject.tag == "Common_Fish")
         {
-            if (Wall.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
+            if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
             {
-                Destroy(Wall.gameObject);
+                Destroy(other.gameObject);
                 NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
             }
         }
 
-        if (Wall.gameObject.tag == "Rare_Fish")
+        if (other.gameObject.tag == "Rare_Fish")
         {
-            if (Wall.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
+            if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
             {
-                Destroy(Wall.gameObject);
+                Destroy(other.gameObject);
                 NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
             }
         }
 
-        if (Wall.gameObject.tag == "Epic_Fish")
+        if (other.gameObject.tag == "Epic_Fish")
         {
-            if (Wall.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
+            if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
             {
-                Destroy(Wall.gameObject);
+                Destroy(other.gameObject);
                 NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
             }
         }
     }
-
-
-
 }

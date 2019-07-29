@@ -8,12 +8,11 @@ public class Testfish : MonoBehaviour
     public float movement = 10f;
     public bool Catched = false;
     public float Yeet_force = 1;
-    public float Yeet_Delay =0.5f;
     public float Min_random;
     public float Max_random;
     public bool tilføjet_yeet = false;
-    public GameObject NumberOfFish;
     public GameObject GM;
+    public bool IsShot = false;
 
 
     /* gør så fiskene ikke collider */
@@ -22,7 +21,6 @@ public class Testfish : MonoBehaviour
         Rb = GetComponent<Rigidbody>();
         Physics.IgnoreLayerCollision(8, 9);
         Physics.IgnoreLayerCollision(9, 9);
-        NumberOfFish = GameObject.Find("FishSpawner");
         GM = GameObject.Find("Game manager");
 
     }
@@ -63,40 +61,6 @@ public class Testfish : MonoBehaviour
     {
         Catched = true;
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (GetComponent<Rigidbody>().velocity.y <= 0 && other.gameObject.tag == "Fisker")
-        {
-
-            if (gameObject.tag == "Fish") //tid fået for at fange fisk
-            {
-                    GM.GetComponent<GameManagerScript>().TidTilbage += 1;
-                    Destroy(gameObject);
-            }
-
-            if (gameObject.tag == "Common_Fish") //tid fået for at fange fisk
-            {
-                    GM.GetComponent<GameManagerScript>().TidTilbage += 1.5f;
-                    Destroy(gameObject);
-            }
-
-            if (gameObject.tag == "Rare_Fish") //tid fået for at fange fisk
-            {
-                    GM.GetComponent<GameManagerScript>().TidTilbage += 2.5f;
-                    Destroy(gameObject);
-            }
-
-            if (gameObject.tag == "Epic_Fish") //tid fået for at fange fisk
-            {
-                    GM.GetComponent<GameManagerScript>().TidTilbage += 5;
-                    Destroy(gameObject);
-            }
-
-
-
-            /*GM.GetComponent<GameManagerScript>().TidTilbage += 10;
-            Destroy(gameObject); */
-        }
-    }
+    
+    
 }

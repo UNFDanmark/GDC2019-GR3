@@ -30,7 +30,7 @@ public class GameManagerScript : MonoBehaviour
 
         DeathTime.text = "Time:" + (int)TidTilbage;
 
-        TotalTime.text = "TAOT: " + (int)Time.deltaTime;
+        TotalTime.text = "TAOT: " + (int)Time.time;
         
         if (TidTilbage <= 0)
         {
