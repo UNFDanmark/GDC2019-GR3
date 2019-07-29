@@ -12,6 +12,7 @@ public class Testfish : MonoBehaviour
     public float Max_random;
     public bool tilføjet_yeet = false;
     public GameObject NumberOfFish;
+    public GameObject GM;
 
 
     /* gør så fiskene ikke collider */
@@ -21,6 +22,7 @@ public class Testfish : MonoBehaviour
         Physics.IgnoreLayerCollision(8, 9);
         Physics.IgnoreLayerCollision(9, 9);
         NumberOfFish = GameObject.Find("FishSpawner");
+        GM = GameObject.Find("Game manager");
 
     }
 
@@ -68,6 +70,19 @@ public class Testfish : MonoBehaviour
         Catched = true;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (GetComponent<Rigidbody>().velocity.y <= 0 && other.gameObject.tag == "Fisker")
+        {
+           GM.GetComponent<GameManagerScript>().TidTilbage += 10;
+            Destroy(gameObject);
+        }
+    }
+
+
+
+
+
 
     /*
     if(fisk == lille)
@@ -80,5 +95,5 @@ public class Testfish : MonoBehaviour
     }
 
     */
-    
+
 }

@@ -124,7 +124,9 @@ MonoBehaviour:
   Rb: {fileID: 0}
   movement: 20
   Catched: 0
-  Yeet_force: 100
+  Yeet_force: 25
   Min_random: -20
   Max_random: 20
   "tilf\xF8jet_yeet": 0
+  NumberOfFish: {fileID: 0}
+  GM: {fileID: 0}
