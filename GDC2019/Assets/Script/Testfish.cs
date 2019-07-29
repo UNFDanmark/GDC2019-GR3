@@ -8,6 +8,7 @@ public class Testfish : MonoBehaviour
     public float movement = 10f;
     public bool Catched = false;
     public float Yeet_force = 1;
+    public float Yeet_Delay =0.5f;
     public float Min_random;
     public float Max_random;
     public bool tilføjet_yeet = false;
@@ -54,16 +55,9 @@ public class Testfish : MonoBehaviour
 
                 tilføjet_yeet = true;
 
-               
-
             }
 
-
-            
-
-            //Rb.AddForce(transform.forward * force);
         }
-       
     }
     public void Catch()
     {
@@ -74,26 +68,35 @@ public class Testfish : MonoBehaviour
     {
         if (GetComponent<Rigidbody>().velocity.y <= 0 && other.gameObject.tag == "Fisker")
         {
-           GM.GetComponent<GameManagerScript>().TidTilbage += 10;
-            Destroy(gameObject);
+
+            if (gameObject.tag == "Fish") //tid fået for at fange fisk
+            {
+                    GM.GetComponent<GameManagerScript>().TidTilbage += 1;
+                    Destroy(gameObject);
+            }
+
+            if (gameObject.tag == "Common_Fish") //tid fået for at fange fisk
+            {
+                    GM.GetComponent<GameManagerScript>().TidTilbage += 1.5f;
+                    Destroy(gameObject);
+            }
+
+            if (gameObject.tag == "Rare_Fish") //tid fået for at fange fisk
+            {
+                    GM.GetComponent<GameManagerScript>().TidTilbage += 2.5f;
+                    Destroy(gameObject);
+            }
+
+            if (gameObject.tag == "Epic_Fish") //tid fået for at fange fisk
+            {
+                    GM.GetComponent<GameManagerScript>().TidTilbage += 5;
+                    Destroy(gameObject);
+            }
+
+
+
+            /*GM.GetComponent<GameManagerScript>().TidTilbage += 10;
+            Destroy(gameObject); */
         }
     }
-
-
-
-
-
-
-    /*
-    if(fisk == lille)
-    {
-    //gør ikke noget
-    }
-    else if(fisk == mellem)
-    {
-    //fang fisk i næt
-    }
-
-    */
-
 }
