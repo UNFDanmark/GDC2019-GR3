@@ -74,7 +74,46 @@ public class Testfish : MonoBehaviour
     {
         if (GetComponent<Rigidbody>().velocity.y <= 0 && other.gameObject.tag == "Fisker")
         {
-           GM.GetComponent<GameManagerScript>().TidTilbage += 10;
+
+            if (other.gameObject.tag == "Fish") //tid for lyserød fisk
+            {
+                if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
+                {
+                    GM.GetComponent<GameManagerScript>().TidTilbage += 10;
+                    Destroy(gameObject);
+                }
+            }
+
+            if (other.gameObject.tag == "Common_Fish") //tid for lyserød fisk
+            {
+                if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
+                {
+                    GM.GetComponent<GameManagerScript>().TidTilbage += 10;
+                    Destroy(gameObject);
+                }
+            }
+
+            if (other.gameObject.tag == "Rare_Fish") //tid for lyserød fisk
+            {
+                if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
+                {
+                    GM.GetComponent<GameManagerScript>().TidTilbage += 10;
+                    Destroy(gameObject);
+                }
+            }
+
+            if (other.gameObject.tag == "Epic_Fish") //tid for lyserød fisk
+            {
+                if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
+                {
+                    GM.GetComponent<GameManagerScript>().TidTilbage += 10;
+                    Destroy(gameObject);
+                }
+            }
+
+
+
+            GM.GetComponent<GameManagerScript>().TidTilbage += 10;
             Destroy(gameObject);
         }
     }

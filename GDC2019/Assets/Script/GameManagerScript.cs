@@ -10,6 +10,8 @@ public class GameManagerScript : MonoBehaviour
     public Text scoretext;
     public float totalScore;
     public float TidTilbage;
+    public Text TotalTime;
+    public float totTid;
     public Text DeathTime;
     public GameObject DeathScreen;
    
@@ -27,6 +29,8 @@ public class GameManagerScript : MonoBehaviour
         scoretext.text = "Score:" + score;
 
         DeathTime.text = "Time:" + (int)TidTilbage;
+
+        TotalTime.text = "TAOT: " + (int)Time.deltaTime;
         
         if (TidTilbage <= 0)
         {

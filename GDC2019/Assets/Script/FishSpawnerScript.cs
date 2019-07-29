@@ -167,12 +167,10 @@ public class FishSpawnerScript : MonoBehaviour
     {
         int tal = Random.Range(1, 100);
         int placement = Random.Range(0, 2);
-        print(NumberOfFishSpawning);
+        print(tal);
 
         if (0 <= tal && tal <= 50)
         {
-
-
             if (placement == 1)
             {
                 int x = Random.Range(85, 145);
@@ -186,8 +184,6 @@ public class FishSpawnerScript : MonoBehaviour
                 int y = Random.Range(-30, 10);
                 Instantiate(Fisk[0], new Vector3(x, y, 26), Quaternion.identity);
             }
-            
-
         }
         if (51 <= tal && tal <= 75)
         {
@@ -195,13 +191,13 @@ public class FishSpawnerScript : MonoBehaviour
             {
                 int x = Random.Range(85, 145);
                 int y = Random.Range(-30, 10);
-                Instantiate(Fisk[1], new Vector3(x, y, 26), Quaternion.identity);
+                Instantiate(Fisk[1], new Vector3(x, y, 26), Quaternion.Euler(0, 0, 180));
             }
             else if (placement == 0)
             {
                 int x = Random.Range(-150, -90);
                 int y = Random.Range(-30, 10);
-                Instantiate(Fisk[1], new Vector3(x, y, 26), Quaternion.Euler(0, 0, 180));
+                Instantiate(Fisk[1], new Vector3(x, y, 26), Quaternion.identity);
             }
         }
         if (76 <= tal && tal <= 90)
@@ -210,13 +206,13 @@ public class FishSpawnerScript : MonoBehaviour
             {
                 int x = Random.Range(85, 145);
                 int y = Random.Range(-30, 10);
-                Instantiate(Fisk[2], new Vector3(x, y, 26), Quaternion.identity);
+                Instantiate(Fisk[2], new Vector3(x, y, 26), Quaternion.Euler(0, 0, 180));
             }
             else if (placement == 0)
             {
                 int x = Random.Range(-150, -90);
                 int y = Random.Range(-30, 10);
-                Instantiate(Fisk[2], new Vector3(x, y, 26), Quaternion.Euler(0, 0, 180));
+                Instantiate(Fisk[2], new Vector3(x, y, 26), Quaternion.identity);
             }
         }
         if (91 <= tal && tal <= 100)
@@ -225,13 +221,13 @@ public class FishSpawnerScript : MonoBehaviour
             {
                 int x = Random.Range(85, 145);
                 int y = Random.Range(-30, 10);
-                Instantiate(Fisk[3], new Vector3(x, y, 26), Quaternion.identity);
+                Instantiate(Fisk[3], new Vector3(x, y, 26), Quaternion.Euler(0, 0, 180));
             }
             else if (placement == 0)
             {
                 int x = Random.Range(-150, -90);
                 int y = Random.Range(-30, 10);
-                Instantiate(Fisk[3], new Vector3(x, y, 26), Quaternion.Euler(0, 0, 180));
+                Instantiate(Fisk[3], new Vector3(x, y, 26), Quaternion.identity);
             }
         }
         

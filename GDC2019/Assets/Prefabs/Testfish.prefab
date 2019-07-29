@@ -124,7 +124,7 @@ MonoBehaviour:
   Rb: {fileID: 0}
   movement: 20
   Catched: 0
-  Yeet_force: 25
+  Yeet_force: 50
   Min_random: -20
   Max_random: 20
   "tilf\xF8jet_yeet": 0
