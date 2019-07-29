@@ -50,9 +50,10 @@ public class Testfish : MonoBehaviour
                 //skub
                 gameObject.GetComponent<Rigidbody>().AddForce(Random.Range(Min_random, Max_random), Yeet_force, 0, ForceMode.Impulse);
 
-                
-
                 tilføjet_yeet = true;
+
+               
+
             }
 
 
