@@ -17,38 +17,35 @@ public class DeathBarrierScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Fish")
         {
-            if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
-            {
-                Destroy(other.gameObject);
-                NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
-            }
+            
+            
+            Destroy(other.gameObject);
+            NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
+            
         }
 
         if (other.gameObject.tag == "Common_Fish")
         {
-            if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
-            {
-                Destroy(other.gameObject);
-                NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
-            }
+           
+            Destroy(other.gameObject);
+            NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
+            
         }
 
         if (other.gameObject.tag == "Rare_Fish")
         {
-            if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
-            {
-                Destroy(other.gameObject);
-                NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
-            }
+            
+            Destroy(other.gameObject);
+            NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
+            
         }
 
         if (other.gameObject.tag == "Epic_Fish")
         {
-            if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
-            {
-                Destroy(other.gameObject);
-                NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
-            }
+          
+            Destroy(other.gameObject);
+            NumberOfFish.GetComponent<FishSpawnerScript>().NumberOfFish--;
+            
         }
     }
 }

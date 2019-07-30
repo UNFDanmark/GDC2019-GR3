@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
-    public int score;
+    //public int score;
     public Text scoretext;
     public float totalScore;
     public float TidTilbage;
@@ -14,11 +14,12 @@ public class GameManagerScript : MonoBehaviour
     public float totTid;
     public Text DeathTime;
     public GameObject DeathScreen;
+    
    
 
     private void Start()
     {
-
+        Data_For_Winscreen.score = 0;
       
     }
 
@@ -26,7 +27,7 @@ public class GameManagerScript : MonoBehaviour
     {
         TidTilbage -= Time.deltaTime;    
 
-        scoretext.text = "Score:" + score;
+        scoretext.text = "Score:" + Data_For_Winscreen.score;
 
         DeathTime.text = "Time:" + (int)TidTilbage;
 

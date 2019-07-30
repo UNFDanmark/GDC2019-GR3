@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class DeathScreenManagerScript : MonoBehaviour
 {
-    
+    public Text scoretext;
+    public Text TotalTime;
+
     void Start()
     {
-        
+        scoretext.text = "Score: " + Data_For_Winscreen.score;
     }
 
     
@@ -18,7 +20,7 @@ public class DeathScreenManagerScript : MonoBehaviour
         {
             
             
-                SceneManager.LoadScene("Project 1");
+            SceneManager.LoadScene("Project 1");
             
         }        
     }
