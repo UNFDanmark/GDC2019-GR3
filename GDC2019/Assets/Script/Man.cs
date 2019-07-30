@@ -8,6 +8,8 @@ public class Man : MonoBehaviour
     public Rigidbody RB;
     public GameObject GM;
     public GameObject Fish_Spawner;
+    public bool tilføjet_yeet = false;
+   
 
 
 
@@ -18,6 +20,7 @@ public class Man : MonoBehaviour
         RB = GetComponent<Rigidbody>();
         GM = GameObject.Find("Game manager");
         Fish_Spawner = GameObject.Find("FishSpawner");
+        tilføjet_yeet = GameObject.Find("Testfish");
     }
 
     private void Update()
@@ -28,13 +31,13 @@ public class Man : MonoBehaviour
             Ray Mouse_position = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(Mouse_position, out hit))
             {
-                if(hit.transform.gameObject.layer == 9)
+                if(hit.transform.gameObject.layer == 9 && tilføjet_yeet == false)
                 {
                     hit.transform.gameObject.GetComponent<Testfish>().IsShot = true;
                     Material dødFiskMaterial = hit.transform.gameObject.GetComponent<Testfish>().DødMaterial;
                     print(dødFiskMaterial);
                     hit.transform.GetChild(0).GetComponent<Renderer>().material= dødFiskMaterial;
-
+                    hit.transform.gameObject.GetComponent<Rigidbody>().AddForce(0, 10, 0, ForceMode.Impulse);
 
 
                 }

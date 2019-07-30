@@ -673,7 +673,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Tryk p\xE5 I for at g\xE5 til startsiden"
+  m_Text: "Tryk p\xE5 Space for at g\xE5 til startsiden"
 --- !u!222 &1184603766
 CanvasRenderer:
   m_ObjectHideFlags: 0
