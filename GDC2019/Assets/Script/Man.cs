@@ -14,6 +14,7 @@ public class Man : MonoBehaviour
     public float Yeet_Tid_Max;
     public GameObject Character_Idle;
     public GameObject Character_Yeet;
+    public GameObject blodSplat;
 
 
 
@@ -44,7 +45,9 @@ public class Man : MonoBehaviour
                     hit.transform.GetChild(0).GetComponent<Renderer>().material= dødFiskMaterial;
                     hit.transform.gameObject.GetComponent<Rigidbody>().AddForce(0, 10, 0, ForceMode.Impulse);
 
-
+                    //Particles :))
+                    GameObject go = Instantiate(blodSplat, new Vector3(hit.transform.position.x, hit.transform.position.y, 0), Quaternion.Euler(0, 0, 0)) as GameObject;
+                    Destroy(go, 10);
 
                 }
                 

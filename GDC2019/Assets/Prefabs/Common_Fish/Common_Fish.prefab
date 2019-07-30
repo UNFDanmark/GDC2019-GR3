@@ -133,6 +133,9 @@ MonoBehaviour:
   IsShot: 0
   "D\xF8dMaterial": {fileID: 2100000, guid: dd46e013e1f02a643a127a2057bf2b9e, type: 2}
   Yeet_Sound: {fileID: 8300000, guid: abbcfb66f2d1963439971d3403ac597a, type: 3}
+  OverFisker: {fileID: 0}
+  splashParticle: {fileID: 5332162793536096541, guid: b4482d9ec38b13046b84eb2d9715a0b0,
+    type: 3}
 --- !u!1 &8969869527957721359
 GameObject:
   m_ObjectHideFlags: 0

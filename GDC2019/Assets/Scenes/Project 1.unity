@@ -347,6 +347,8 @@ MonoBehaviour:
   Yeet_Tid_Max: 0.2
   Character_Idle: {fileID: 334967370}
   Character_Yeet: {fileID: 1692120179}
+  blodSplat: {fileID: 7911487481645846385, guid: b455c1e98a72d0f4abe4e20929f7eedd,
+    type: 3}
 --- !u!65 &159751339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -973,7 +975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoretext: {fileID: 95274942}
   totalScore: 0
-  TidTilbage: 30
+  TidTilbage: 60
   TotalTime: {fileID: 196650394}
   totTid: 0
   DeathTime: {fileID: 1665295031}
@@ -1322,7 +1324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThemeSource: {fileID: 816255985}
-  gameLength: 30
+  gameLength: 60
   timeLeft: 0
   maxPitch: 0.3
   pitchTilMusik: 0
@@ -2119,7 +2121,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471379022}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

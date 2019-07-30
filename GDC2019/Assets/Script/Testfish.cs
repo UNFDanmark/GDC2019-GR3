@@ -16,7 +16,9 @@ public class Testfish : MonoBehaviour
     public Material DødMaterial;
     public AudioClip Yeet_Sound;
     public GameObject OverFisker;
+    public GameObject splashParticle;
 
+    private bool hasSplashed = false;
 
     /* gør så fiskene ikke collider */
     private void Start()
@@ -60,6 +62,14 @@ public class Testfish : MonoBehaviour
                 
                 tilføjet_yeet = true;
 
+            }
+
+            if (tilføjet_yeet == true && hasSplashed == false && transform.position.y >= 11)
+            {
+                //particles
+                GameObject go = Instantiate(splashParticle, new Vector3(transform.position.x,11f,0), Quaternion.Euler(-90,0,0)) as GameObject;
+                Destroy(go, 10);
+                hasSplashed = true;
             }
 
         }
