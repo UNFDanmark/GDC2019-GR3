@@ -31,6 +31,12 @@ public class Man : MonoBehaviour
                 if(hit.transform.gameObject.layer == 9)
                 {
                     hit.transform.gameObject.GetComponent<Testfish>().IsShot = true;
+                    Material dødFiskMaterial = hit.transform.gameObject.GetComponent<Testfish>().DødMaterial;
+                    print(dødFiskMaterial);
+                    hit.transform.GetChild(0).GetComponent<Renderer>().material= dødFiskMaterial;
+
+
+
                 }
                 
 

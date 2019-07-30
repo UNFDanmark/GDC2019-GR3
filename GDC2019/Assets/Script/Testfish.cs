@@ -13,6 +13,7 @@ public class Testfish : MonoBehaviour
     public bool tilføjet_yeet = false;
     public GameObject GM;
     public bool IsShot = false;
+    public Material DødMaterial;
 
 
     /* gør så fiskene ikke collider */
