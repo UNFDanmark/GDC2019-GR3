@@ -54,9 +54,9 @@ public class Testfish : MonoBehaviour
                 gameObject.GetComponent<Rigidbody>().AddForce(Random.Range(Min_random, Max_random), Yeet_force, 0, ForceMode.Impulse);
 
                 //Yeet_force lyd
-                AudioSource.PlayClipAtPoint(Yeet_Sound, gameObject.transform.position);
+                AudioSource.PlayClipAtPoint(Yeet_Sound, gameObject.transform.position,1f);
 
-                print("test");
+                
                 tilføjet_yeet = true;
 
             }
