@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class DeathScreenManagerScript : MonoBehaviour
 {
     public Text scoretext;
-    public Text TotalTime;
 
     void Start()
     {
@@ -22,6 +21,13 @@ public class DeathScreenManagerScript : MonoBehaviour
             
             SceneManager.LoadScene("Project 1");
             
-        }        
+        }
+        else if (Input.GetKeyDown(KeyCode.I))
+        {
+
+
+            SceneManager.LoadScene("StartScreen");
+
+        }
     }
 }

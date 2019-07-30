@@ -167,7 +167,7 @@ public class FishSpawnerScript : MonoBehaviour
     {
         int tal = Random.Range(1, 100);
         int placement = Random.Range(0, 2);
-        print(tal);
+
 
         if (0 <= tal && tal <= 50)
         {

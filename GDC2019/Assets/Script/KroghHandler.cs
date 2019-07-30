@@ -35,7 +35,7 @@ public class KroghHandler : MonoBehaviour
             if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
             {
                 //Score.GetComponent<GameManagerScript>().score += 10;
-                Data_For_Winscreen.score += 10;
+                //Data_For_Winscreen.score += 10;
                 other.gameObject.GetComponent<Testfish>().Catch();
                 
 
@@ -46,7 +46,7 @@ public class KroghHandler : MonoBehaviour
         {
             if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
             {
-                Data_For_Winscreen.score += 20;
+                //Data_For_Winscreen.score += 20;
                 other.gameObject.GetComponent<Testfish>().Catch();
              
                 
@@ -57,7 +57,7 @@ public class KroghHandler : MonoBehaviour
         {
             if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
             {
-                Data_For_Winscreen.score += 40;
+                //Data_For_Winscreen.score += 40;
                 other.gameObject.GetComponent<Testfish>().Catch();
                
                
@@ -68,7 +68,7 @@ public class KroghHandler : MonoBehaviour
         {
             if (other.gameObject.GetComponent<Testfish>().tilføjet_yeet == false)
             {
-                Data_For_Winscreen.score += 80;
+                //Data_For_Winscreen.score += 80;
                 other.gameObject.GetComponent<Testfish>().Catch();
                
                 
