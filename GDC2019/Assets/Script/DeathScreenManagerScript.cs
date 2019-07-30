@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class DeathScreenManagerScript : MonoBehaviour
 {
     public Text scoretext;
-    public Text TotalTime;
 
     void Start()
     {

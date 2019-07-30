@@ -59,29 +59,33 @@ public class Man : MonoBehaviour
         {
             if (other.transform.tag == "Fish") //tid fået for at fange fisk
             {
-                GM.GetComponent<GameManagerScript>().TidTilbage += 0.75f;
+                //GM.GetComponent<GameManagerScript>().TidTilbage += 0.75f;
                 Fish_Spawner.GetComponent<FishSpawnerScript>().NumberOfFish--;
+                Data_For_Winscreen.score += 50;
                 Destroy(other.transform.gameObject);
             }
 
             if (other.transform.tag == "Common_Fish") //tid fået for at fange fisk
             {
-                GM.GetComponent<GameManagerScript>().TidTilbage += 1.25f;
+                //GM.GetComponent<GameManagerScript>().TidTilbage += 1.25f;
                 Fish_Spawner.GetComponent<FishSpawnerScript>().NumberOfFish--;
+                Data_For_Winscreen.score += 200;
                 Destroy(other.transform.gameObject);
             }
 
             if (other.transform.tag == "Rare_Fish") //tid fået for at fange fisk
             {
-                GM.GetComponent<GameManagerScript>().TidTilbage += 1.75f;
+                //GM.GetComponent<GameManagerScript>().TidTilbage += 1.75f;
                 Fish_Spawner.GetComponent<FishSpawnerScript>().NumberOfFish--;
+                Data_For_Winscreen.score += 400;
                 Destroy(other.transform.gameObject);
             }
 
             if (other.transform.tag == "Epic_Fish") //tid fået for at fange fisk
             {
-                GM.GetComponent<GameManagerScript>().TidTilbage += 2.5f;
+                //GM.GetComponent<GameManagerScript>().TidTilbage += 2.5f;
                 Fish_Spawner.GetComponent<FishSpawnerScript>().NumberOfFish--;
+                Data_For_Winscreen.score += 900;
                 Destroy(other.transform.gameObject);
             }
         }
