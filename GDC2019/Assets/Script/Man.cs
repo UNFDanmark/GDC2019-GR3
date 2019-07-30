@@ -61,7 +61,7 @@ public class Man : MonoBehaviour
 
         float VSpeed = Input.GetAxisRaw("Vertical");
         RB.velocity = new Vector3(RB.velocity.x, VSpeed * speed, RB.velocity.z);
-        transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, 12.3f, 48.5f), transform.position.z);
+        transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, 20f, 72f), transform.position.z);
 
     }
 
