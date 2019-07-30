@@ -15,6 +15,7 @@ public class Testfish : MonoBehaviour
     public bool IsShot = false;
     public Material DødMaterial;
     public AudioClip Yeet_Sound;
+    public GameObject OverFisker;
 
 
     /* gør så fiskene ikke collider */
@@ -24,7 +25,7 @@ public class Testfish : MonoBehaviour
         Physics.IgnoreLayerCollision(8, 9);
         Physics.IgnoreLayerCollision(9, 9);
         GM = GameObject.Find("Game manager");
-
+        OverFisker = GameObject.Find("Over_Fisker");
     }
 
     /* får fiskene til at bevæge sig */
@@ -66,6 +67,7 @@ public class Testfish : MonoBehaviour
     public void Catch()
     {
         Catched = true;
+        OverFisker.GetComponent<Man>().Yeet_Er_Nemt();
     }
     
     

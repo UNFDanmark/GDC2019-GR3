@@ -10,7 +10,10 @@ public class Man : MonoBehaviour
     public GameObject Fish_Spawner;
     public bool tilføjet_yeet = false;
     public AudioClip Gun_Sound;
-   
+    public float Yeet_Tid_Tilbage;
+    public float Yeet_Tid_Max;
+    public GameObject Character_Idle;
+    public GameObject Character_Yeet;
 
 
 
@@ -62,7 +65,15 @@ public class Man : MonoBehaviour
         float VSpeed = Input.GetAxisRaw("Vertical");
         RB.velocity = new Vector3(RB.velocity.x, VSpeed * speed, RB.velocity.z);
         transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, 20f, 72f), transform.position.z);
-
+        if (Yeet_Tid_Tilbage <= 0)
+        {
+            Character_Idle.SetActive(true);
+            Character_Yeet.SetActive(false);
+        }
+        else
+        {
+            Yeet_Tid_Tilbage -= Time.fixedDeltaTime;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -101,5 +112,11 @@ public class Man : MonoBehaviour
                 Destroy(other.transform.gameObject);
             }
         }
+    }
+    public void Yeet_Er_Nemt()
+    {
+        Character_Idle.SetActive(false);
+        Character_Yeet.SetActive(true);
+        Yeet_Tid_Tilbage = Yeet_Tid_Max;
     }
 }
