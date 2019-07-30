@@ -175,8 +175,7 @@ public class FishSpawnerScript : MonoBehaviour
             {
                 int x = Random.Range(85, 145);
                 int y = Random.Range(-30, 10);
-                Instantiate(Fisk[0], new Vector3(x, y, 26), Quaternion.Euler(0, 0, 180));
-                print("dfsf");
+                Instantiate(Fisk[0], new Vector3(x, y, 26), Quaternion.Euler(180, 0, 180));
             }
             else if(placement == 0)
             {
@@ -191,7 +190,7 @@ public class FishSpawnerScript : MonoBehaviour
             {
                 int x = Random.Range(85, 145);
                 int y = Random.Range(-30, 10);
-                Instantiate(Fisk[1], new Vector3(x, y, 26), Quaternion.Euler(0, 0, 180));
+                Instantiate(Fisk[1], new Vector3(x, y, 26), Quaternion.Euler(180, 0, 180));
             }
             else if (placement == 0)
             {
@@ -206,7 +205,7 @@ public class FishSpawnerScript : MonoBehaviour
             {
                 int x = Random.Range(85, 145);
                 int y = Random.Range(-30, 10);
-                Instantiate(Fisk[2], new Vector3(x, y, 26), Quaternion.Euler(0, 0, 180));
+                Instantiate(Fisk[2], new Vector3(x, y, 26), Quaternion.Euler(180, 0, 180));
             }
             else if (placement == 0)
             {
@@ -221,7 +220,7 @@ public class FishSpawnerScript : MonoBehaviour
             {
                 int x = Random.Range(85, 145);
                 int y = Random.Range(-30, 10);
-                Instantiate(Fisk[3], new Vector3(x, y, 26), Quaternion.Euler(0, 0, 180));
+                Instantiate(Fisk[3], new Vector3(x, y, 26), Quaternion.Euler(180, 0, 180));
             }
             else if (placement == 0)
             {
