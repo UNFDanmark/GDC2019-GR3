@@ -14,6 +14,7 @@ public class Testfish : MonoBehaviour
     public GameObject GM;
     public bool IsShot = false;
     public Material DødMaterial;
+    public AudioClip Yeet_Sound;
 
 
     /* gør så fiskene ikke collider */
@@ -52,6 +53,10 @@ public class Testfish : MonoBehaviour
                 //skub
                 gameObject.GetComponent<Rigidbody>().AddForce(Random.Range(Min_random, Max_random), Yeet_force, 0, ForceMode.Impulse);
 
+                //Yeet_force lyd
+                AudioSource.PlayClipAtPoint(Yeet_Sound, gameObject.transform.position);
+
+                print("test");
                 tilføjet_yeet = true;
 
             }
