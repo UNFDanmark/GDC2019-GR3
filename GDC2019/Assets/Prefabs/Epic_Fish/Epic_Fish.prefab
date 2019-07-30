@@ -131,6 +131,7 @@ MonoBehaviour:
   "tilf\xF8jet_yeet": 0
   GM: {fileID: 0}
   IsShot: 0
+  "D\xF8dMaterial": {fileID: 2100000, guid: 09f53484ac35b4d4e9066fce9e378c9f, type: 2}
 --- !u!1 &6574621708243002546
 GameObject:
   m_ObjectHideFlags: 0

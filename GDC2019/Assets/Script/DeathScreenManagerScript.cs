@@ -21,6 +21,13 @@ public class DeathScreenManagerScript : MonoBehaviour
             
             SceneManager.LoadScene("Project 1");
             
-        }        
+        }
+        else if (Input.GetKeyDown(KeyCode.I))
+        {
+
+
+            SceneManager.LoadScene("StartScreen");
+
+        }
     }
 }
