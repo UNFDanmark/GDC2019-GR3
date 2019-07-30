@@ -9,6 +9,7 @@ public class Man : MonoBehaviour
     public GameObject GM;
     public GameObject Fish_Spawner;
     public bool tilføjet_yeet = false;
+    public AudioClip Gun_Sound;
    
 
 
@@ -27,6 +28,7 @@ public class Man : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            AudioSource.PlayClipAtPoint(Gun_Sound, gameObject.transform.position, 100f);
             RaycastHit hit;
             Ray Mouse_position = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(Mouse_position, out hit))
@@ -38,6 +40,7 @@ public class Man : MonoBehaviour
                     print(dødFiskMaterial);
                     hit.transform.GetChild(0).GetComponent<Renderer>().material= dødFiskMaterial;
                     hit.transform.gameObject.GetComponent<Rigidbody>().AddForce(0, 10, 0, ForceMode.Impulse);
+
 
 
                 }
