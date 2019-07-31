@@ -15,6 +15,7 @@ public class Man : MonoBehaviour
     public GameObject Character_Idle;
     public GameObject Character_Yeet;
     public GameObject blodSplat;
+    public AudioClip Grill_Lyd;
 
 
 
@@ -83,6 +84,7 @@ public class Man : MonoBehaviour
     {
         if (other.transform.gameObject.GetComponent<Rigidbody>().velocity.y <= 0 && other.transform.gameObject.GetComponent<Testfish>().IsShot)
         {
+            AudioSource.PlayClipAtPoint(Grill_Lyd, transform.position, 1f);
             if (other.transform.tag == "Fish") //tid fået for at fange fisk
             {
                 //GM.GetComponent<GameManagerScript>().TidTilbage += 0.75f;

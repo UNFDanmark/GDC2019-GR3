@@ -131,7 +131,7 @@ MonoBehaviour:
   "tilf\xF8jet_yeet": 0
   GM: {fileID: 0}
   IsShot: 0
-  "D\xF8dMaterial": {fileID: 2100000, guid: 09f53484ac35b4d4e9066fce9e378c9f, type: 2}
+  "D\xF8dMaterial": {fileID: 2100000, guid: f07180ce2de0d5849a52dae08ef0cb7f, type: 2}
   Yeet_Sound: {fileID: 8300000, guid: abbcfb66f2d1963439971d3403ac597a, type: 3}
   OverFisker: {fileID: 0}
   splashParticle: {fileID: 5332162793536096541, guid: b4482d9ec38b13046b84eb2d9715a0b0,
@@ -176,7 +176,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6574621708243002546}
-  m_Mesh: {fileID: 5060444177187149915, guid: 9d0c2e68f3894ca4ab1beb1144a0c537, type: 3}
+  m_Mesh: {fileID: 5060444177187149915, guid: 1adba2f951e2fb649b147032653e7213, type: 3}
 --- !u!23 &7268134690620144460
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -194,7 +194,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: adc26f6245694214f82df8cfc1e5c583, type: 2}
+  - {fileID: 2100000, guid: 4fc3f5f832b1a2a4cbe6cee3e93c4b63, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
