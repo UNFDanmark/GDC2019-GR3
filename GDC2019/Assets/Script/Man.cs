@@ -8,6 +8,13 @@ public class Man : MonoBehaviour
     public Rigidbody RB;
     public GameObject GM;
     public GameObject Fish_Spawner;
+    public bool tilføjet_yeet = false;
+    public AudioClip Gun_Sound;
+    public float Yeet_Tid_Tilbage;
+    public float Yeet_Tid_Max;
+    public GameObject Character_Idle;
+    public GameObject Character_Yeet;
+    public GameObject blodSplat;
 
 
 
@@ -18,24 +25,29 @@ public class Man : MonoBehaviour
         RB = GetComponent<Rigidbody>();
         GM = GameObject.Find("Game manager");
         Fish_Spawner = GameObject.Find("FishSpawner");
+        tilføjet_yeet = GameObject.Find("Testfish");
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            AudioSource.PlayClipAtPoint(Gun_Sound, gameObject.transform.position, 100f);
             RaycastHit hit;
             Ray Mouse_position = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(Mouse_position, out hit))
             {
-                if(hit.transform.gameObject.layer == 9)
+                if(hit.transform.gameObject.layer == 9 && tilføjet_yeet == false)
                 {
                     hit.transform.gameObject.GetComponent<Testfish>().IsShot = true;
                     Material dødFiskMaterial = hit.transform.gameObject.GetComponent<Testfish>().DødMaterial;
                     print(dødFiskMaterial);
                     hit.transform.GetChild(0).GetComponent<Renderer>().material= dødFiskMaterial;
+                    hit.transform.gameObject.GetComponent<Rigidbody>().AddForce(0, 10, 0, ForceMode.Impulse);
 
-
+                    //Particles :))
+                    GameObject go = Instantiate(blodSplat, new Vector3(hit.transform.position.x, hit.transform.position.y, 0), Quaternion.Euler(0, 0, 0)) as GameObject;
+                    Destroy(go, 10);
 
                 }
                 
@@ -55,8 +67,16 @@ public class Man : MonoBehaviour
 
         float VSpeed = Input.GetAxisRaw("Vertical");
         RB.velocity = new Vector3(RB.velocity.x, VSpeed * speed, RB.velocity.z);
-        transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, 12.3f, 48.5f), transform.position.z);
-
+        transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, 20f, 72f), transform.position.z);
+        if (Yeet_Tid_Tilbage <= 0)
+        {
+            Character_Idle.SetActive(true);
+            Character_Yeet.SetActive(false);
+        }
+        else
+        {
+            Yeet_Tid_Tilbage -= Time.fixedDeltaTime;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -95,5 +115,11 @@ public class Man : MonoBehaviour
                 Destroy(other.transform.gameObject);
             }
         }
+    }
+    public void Yeet_Er_Nemt()
+    {
+        Character_Idle.SetActive(false);
+        Character_Yeet.SetActive(true);
+        Yeet_Tid_Tilbage = Yeet_Tid_Max;
     }
 }

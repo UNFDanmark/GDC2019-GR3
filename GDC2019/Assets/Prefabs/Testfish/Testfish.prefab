@@ -120,7 +120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3944206159185484140}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 35.2, y: 0, z: 3.57}
+  m_LocalPosition: {x: 35.2, y: 0, z: 0}
   m_LocalScale: {x: 9.5, y: 9.5, z: 9.5}
   m_Children:
   - {fileID: 7186129055778284140}
@@ -223,3 +223,7 @@ MonoBehaviour:
   GM: {fileID: 0}
   IsShot: 0
   "D\xF8dMaterial": {fileID: 2100000, guid: 21302e62626c98f439847735707f2819, type: 2}
+  Yeet_Sound: {fileID: 8300000, guid: abbcfb66f2d1963439971d3403ac597a, type: 3}
+  OverFisker: {fileID: 0}
+  splashParticle: {fileID: 5332162793536096541, guid: b4482d9ec38b13046b84eb2d9715a0b0,
+    type: 3}

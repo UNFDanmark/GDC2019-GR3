@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6442713033606216100}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -15.8, y: -20.212662, z: 25.8}
+  m_LocalPosition: {x: -15.8, y: -20.212662, z: 22}
   m_LocalScale: {x: 9.5, y: 9.5, z: 9.5}
   m_Children:
   - {fileID: 6147846018479270500}
@@ -132,6 +132,10 @@ MonoBehaviour:
   GM: {fileID: 0}
   IsShot: 0
   "D\xF8dMaterial": {fileID: 2100000, guid: dd46e013e1f02a643a127a2057bf2b9e, type: 2}
+  Yeet_Sound: {fileID: 8300000, guid: abbcfb66f2d1963439971d3403ac597a, type: 3}
+  OverFisker: {fileID: 0}
+  splashParticle: {fileID: 5332162793536096541, guid: b4482d9ec38b13046b84eb2d9715a0b0,
+    type: 3}
 --- !u!1 &8969869527957721359
 GameObject:
   m_ObjectHideFlags: 0

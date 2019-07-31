@@ -13,6 +13,7 @@ public class KroghHandler : MonoBehaviour
     public int Rare_Fishpoint;
     public int Epic_Fishpoint;
     public GameObject NumberOfFish;
+    
 
 
 
